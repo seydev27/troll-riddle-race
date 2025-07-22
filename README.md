@@ -2,7 +2,7 @@
 
 Troll Riddle Race is a modular, Python-based puzzle game where you race a troll across a grid — one riddle at a time.
 
-I built it to sharpen my Python skills while studying CS, using recursion, logic, and modular programming — with a twist: a custom riddle library.
+I built it to sharpen my Python skills while studying Python, using recursion, logic, and modular programming — with a twist: a custom riddle library.
 
 ---
 **🎯 Project Objective**
