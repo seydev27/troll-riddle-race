@@ -42,3 +42,29 @@ def ask_riddle():
     user_response = input("Your answer: ").strip().lower()
 
     return user_response == answer.lower()
+
+def final_riddle_challenge(attempts_remaining=3):
+    """
+    Recursively asks the player to solve a final riddle with a limited number of tries.
+    Uses recursion instead of loops to manage repeated prompts.
+
+    Returns True if the correct answer is given within allowed attempts, False otherwise.
+    """
+    if attempts_remaining == 0:
+        print("❌ You failed to solve the final riddle.")
+        return False
+
+    question = "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?"
+    correct_answer = "echo"
+
+    print(f"\n🏆 Final Riddle Challenge! Attempts remaining: {attempts_remaining}")
+    print(f"💬 Riddle: {question}")
+    guess = input("Your answer: ").strip().lower()
+
+    if guess == correct_answer:
+        print("🎉 Correct! You've claimed the treasure!")
+        return True
+    else:
+        print("🙈 Not quite. Try again.")
+        return final_riddle_challenge(attempts_remaining - 1)
+
