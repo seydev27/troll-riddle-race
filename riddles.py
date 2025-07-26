@@ -1,37 +1,44 @@
 # Author: Margaret Seymour
 # GitHub username: seydev27
 # Date: 2025-07-25
-# Description: Riddle library for Troll Riddle Race.
-#              Returns one random riddle as a (question, answer) tuple.
-#              Riddles are wordplay or logic-based and intended for general audiences.
+# Description:
+# Riddle library module for Troll Riddle Race.
+# Contains a bank of (question, answer) pairs and the main riddle function.
+# Used by the game to test player logic and control turn flow.
 
 import random
 
-def get_riddle():
+# List of 20 riddle (question, answer) pairs
+RIDDLES = [
+    ("What has keys but can't open locks?", "piano"),
+    ("What has hands but can’t clap?", "clock"),
+    ("What gets wetter as it dries?", "towel"),
+    ("What has to be broken before you can use it?", "egg"),
+    ("I’m tall when I’m young and short when I’m old. What am I?", "candle"),
+    ("What has a neck but no head?", "bottle"),
+    ("What goes up but never comes down?", "age"),
+    ("What has one eye but can’t see?", "needle"),
+    ("What can travel around the world while staying in the same spot?", "stamp"),
+    ("What has legs but doesn’t walk?", "table"),
+    ("The more you take, the more you leave behind. What are they?", "footsteps"),
+    ("What comes once in a minute, twice in a moment, but never in a thousand years?", "m"),
+    ("What is full of holes but still holds water?", "sponge"),
+    ("What is so fragile that saying its name breaks it?", "silence"),
+    ("What can you catch but not throw?", "cold"),
+    ("What has a head and a tail but no body?", "coin"),
+    ("What has cities but no houses, forests but no trees, and water but no fish?", "map"),
+    ("What invention lets you look right through a wall?", "window"),
+    ("What has many teeth but can’t bite?", "comb"),
+    ("What begins with T, ends with T, and has T in it?", "teapot")
+]
+
+def ask_riddle():
     """
-    Returns a random riddle from the 20 item list as a tuple (question, answer).
-    The answer is always in lowercase for easier comparison.
+    Selects a random riddle from the list and asks the player to solve it.
+    Returns True if the player's answer is correct, False otherwise.
     """
-    riddles = [
-        ("What has to be broken before you can use it?", "egg"),
-        ("I’m tall when I’m young and short when I’m old. What am I?", "candle"),
-        ("The more of me you take, the more you leave behind. What am I?", "footsteps"),
-        ("What gets wetter the more it dries?", "towel"),
-        ("What month has 28 days?", "all"),
-        ("What comes once in a minute, twice in a moment, but never in a thousand years?", "m"),
-        ("What begins with T, ends with T, and has T in it?", "teapot"),
-        ("What has many keys but can’t open a lock?", "piano"),
-        ("What can you catch but not throw?", "cold"),
-        ("What has hands but can’t clap?", "clock"),
-        ("What has words but never speaks?", "book"),
-        ("What has one eye but can’t see?", "needle"),
-        ("Forward I am heavy, but backward I am not. What am I?", "ton"),
-        ("What has legs but doesn’t walk?", "table"),
-        ("You see me once in June, twice in November, but not at all in May. What am I?", "e"),
-        ("What has a neck but no head?", "bottle"),
-        ("What goes up but never comes down?", "age"),
-        ("What can travel around the world while staying in the same corner?", "stamp"),
-        ("What kind of band never plays music?", "rubber"),
-        ("What building has the most stories?", "library")
-    ]
-    return random.choice(riddles)
+    question, answer = random.choice(RIDDLES)
+    print(f"\n🔍 Riddle: {question}")
+    user_response = input("Your answer: ").strip().lower()
+
+    return user_response == answer.lower()
