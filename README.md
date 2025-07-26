@@ -1,6 +1,6 @@
 # 🧌 Troll Riddle Race
 
-**Troll Riddle Race** is a modular, Python-based logic game built as a final project to apply key programming skills from CS162. Players navigate a grid by solving riddles, racing against a troll to reach a hidden treasure — with recursion, randomness, and risk at every turn.
+**Troll Riddle Race** is a modular, Python-based logic game built as a final project to apply key programming skills from Python. Players navigate a grid by solving riddles, racing against a troll to reach a hidden treasure — with recursion, randomness, and risk at every turn.
 
 ---
 
