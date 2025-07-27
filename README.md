@@ -2,6 +2,12 @@
 
 **Troll Riddle Race** is a modular, Python-based logic game built as a project to apply key programming skills from Python. Players navigate a grid by solving riddles, racing against a troll to reach a hidden treasure — with recursion, randomness, and risk used.
 
+## ▶️ Try It Live
+
+Run the game on Replit:  
+👉 [Troll Riddle Race on Replit](https://replit.com/@seydev27/troll-riddle-race)
+
+
 ---
 
 ## 🎯 Overview
