@@ -1,6 +1,5 @@
 # Author: Margaret Seymour
 # GitHub username: seydev27
-# Date: 2025-07-25
 # Description:
 # Riddle library module for Troll Riddle Race.
 # Contains a bank of (question, answer) pairs and the main riddle function.
